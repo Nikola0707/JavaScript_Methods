@@ -15,3 +15,27 @@ const maxValue = numbers.reduce((accumulator, value) => {
     }
 })
 console.log(`Max value is: ${maxValue}`);
+
+// Get monthly expenses
+const monthExpenses = [
+    {
+        product: 'Car care',
+        price: 100,
+        count: 1
+    },
+    {
+        product: 'Kids School',
+        price: 1100,
+        count: 3
+    },
+    {
+        product: 'Bills',
+        price: 2130,
+        count: 1
+    }
+];
+
+const totalMonthly = monthExpenses.reduce((acc, item) => {
+    return acc + item.price * item.count;
+}, 0)
+console.log(`Total Expenses: $${totalMonthly}`);
